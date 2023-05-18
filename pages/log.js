@@ -5,8 +5,9 @@ export const login = () => {
   const router = useRouter();
  const {logout}= UserAuth();
  const handleLogout=async (e) =>{
-  const user= logout()
- console.log(user)  
+  const user= JSON.parse(sessionStorage.getItem("user"));
+    logout();
+    router.push('/login')
 }
   return (
     <div>
@@ -19,7 +20,6 @@ export const login = () => {
                 logout
               </button>
             </div>
-
     </div>
   )
 }

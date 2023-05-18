@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import {BsNewspaper } from 'react-icons/bs'
 import { FaBars, FaTimes, FaHome, FaSignInAlt, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
@@ -49,30 +50,39 @@ export default function Navbar(){
               height='15'
               className='cursor-pointer'
             />
+            <h1 className="-ml-20  font-bold text-2xl text-[#134e4a]">Shareholder Management System</h1>
           </a>
     
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden font-semibold md:flex '>
-            <li className='ml-10 text-sm uppercase hover:border-b hover:text-darkGrayishBlue'>
+            <li className='flex flex-row ml-10 text-sm uppercase hover:border-b hover:text-darkGrayishBlue'>
             <FaHome size={20} className="mr-2" />
               <Link href='/'>Home</Link> 
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b  hover:text-darkGrayishBlue'>
+            <li className='flex flex-row ml-10 text-sm uppercase hover:border-b  hover:text-darkGrayishBlue'>
             <FaInfoCircle size={20} className="mr-2" />
               <Link href='/#aboutus'>About</Link>
             </li>
-    
-            <li className='ml-10 text-sm uppercase hover:border-b hover:text-darkGrayishBlue'>
+            <li className='flex flex-row ml-10 text-sm uppercase hover:border-b hover:text-darkGrayishBlue'>
+            <FaEnvelope size={20} className="mr-2" />
+              <Link href='/#news'>News</Link>
+            </li>
+            <li className='flex flex-row ml-10 text-sm uppercase hover:border-b hover:text-darkGrayishBlue'>
             <FaEnvelope size={20} className="mr-2" />
               <Link href='/#contact'>Contact</Link>
             </li>
-
-            <li className="ml-10 text-sm uppercase hover:border-b hover:text-darkGrayishBlue rounded-lg focus:outline-none  md:block">
+          
+        
+            <li className="flex flex-row ml-10 text-sm uppercase hover:border-b  w-20 h-10 items-center rounded-lg bg-sky-500 hover:bg-sky-600 -mt-2" >
             <FaSignInAlt size={20} className="mr-2" />
-              <Link href='/login'>log in</Link>
+              <Link href='/login' legacyBehavior>
+                <a className=''>
+                log in
+                </a>
+                </Link>
             </li>
-
+            
           </ul>
           
           {/* Hamburger Icon */}
@@ -123,32 +133,46 @@ export default function Navbar(){
             </div>
             <div className='border-b border-gray-300 my-4'>
               <p className='w-[85%] md:w-[90%] py-4'>
-                Let&#39;s build something legendary together
+                welcome, feel as your home!
               </p>
             </div>
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
               <Link href='/'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='flex flex-row  text-sm uppercase hover:border-b hover:text-darkGrayishBlue py-4 '>
+                <FaHome size={20} className="mr-2" />
                   Home
                 </li>
               </Link>
               <Link href='/#Aboutus'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  About
+                <li onClick={() => setNav(false)} className=' flex flex-row  text-sm uppercase hover:border-b hover:text-darkGrayishBlue py-4'>
+                <FaInfoCircle size={20} className="mr-2" />
+                About
                 </li>
               </Link>
+
+              <Link href='/#news'>
+             
+                <li onClick={() => setNav(false)} className='flex flex-row  uppercase hover:border-b hover:text-darkGrayishBlue py-4 text-sm'>
+                <BsNewspaper size={20} className="mr-2" />
+                 News
+                </li>
+              </Link>
+
               <Link href='/#Contact'>
-              <FaEnvelope size={20} className="mr-2" />
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+            
+                <li onClick={() => setNav(false)} className='flex flex-row  uppercase hover:border-b hover:text-darkGrayishBlue py-4 text-sm'>
+                <FaEnvelope size={20} className="mr-2" />
                   Contact
                 </li>
               </Link>
+             
               <Link href='/login'>
-              <FaSignInAlt size={20} className="mr-2" />
+            
               
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                <li onClick={() => setNav(false)} className='flex flex-row text-sm uppercase hover:border-b  w-20 h-10 items-center rounded-lg bg-sky-500 hover:bg-sky-600 -mt-2" py-4'>
+                <FaSignInAlt size={20} className="mr-2" />
                   Login
                 </li>
               </Link>

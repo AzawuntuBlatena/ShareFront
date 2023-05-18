@@ -3,9 +3,10 @@
 import Heator from "@/components/Layout/Heator"
 import Aboutus from "@/components/Aboutus"
 import Contact from "@/components/Contact"
+import News from "@/components/News"
 import Section from "@/components/Section"
-import Layout from "@/components/Layout/Layout"
-import Myshare from "@/components/Myshare"
+
+
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <Heator>
     <Section/>
     <Aboutus/>
+    <News/>
     <Contact/>
     </Heator>
    

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavLogo from '../public/assets/logo/sm.jpg'
 
 const Footer = () => {
   return (
@@ -9,7 +10,13 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <Link href="/" legacyBehavior>
             <a className="flex items-center justify-center md:justify-start mb-2 md:mb-0">
-              <Image src="/logo.png" width={30} height={30} alt="logo" />
+            <Image
+              src={NavLogo}
+              alt='/'
+              width='100'
+              height='15'
+              className='cursor-pointer'
+            />
               <h1 className="ml-2 font-bold text-lg text-white">Shareholder Management System</h1>
             </a>
           </Link>
@@ -18,28 +25,35 @@ const Footer = () => {
           <ul className="flex justify-center md:justify-end mb-4 md:mb-0">
             <li className="ml-6">
               <Link href="/" legacyBehavior>
-                <a className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+                <a className="text-white hover:text-gray-500 transition duration-300 ease-in-out">
                   Home
                 </a>
               </Link>
             </li>
             <li className="ml-6">
               <Link href="/#aboutus" legacyBehavior>
-                <a className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+                <a className="text-white hover:text-gray-500 transition duration-300 ease-in-out">
                   About
                 </a>
               </Link>
             </li>
             <li className="ml-6">
+              <Link href="/#news" legacyBehavior>
+                <a className="text-white hover:text-gray-500 transition duration-300 ease-in-out">
+                 News
+                </a>
+              </Link>
+            </li>
+            <li className="ml-6">
               <Link href="/#contact" legacyBehavior>
-                <a className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+                <a className="text-white hover:text-gray-500 transition duration-300 ease-in-out">
                   Contact
                 </a>
               </Link>
             </li>
             <li className="ml-6">
               <Link href="/login" legacyBehavior>
-                <a className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+                <a className="text-white hover:text-gray-500 transition duration-300 ease-in-out">
                   Login
                 </a>
               </Link>
@@ -59,9 +73,9 @@ const Footer = () => {
             <h2 className="text-lg font-bold mb-2">Contact us</h2>
             <p className="text-sm">
               Shareholder Management System<br />
-              123 Main Street<br />
-              Anytown, USA 12345<br />
-              <a href="mailto:info@shareholdermanagement.com" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">info@shareholdermanagement.com</a>
+              Ethiopia
+              Bahirdar 4<br />
+              
             </p>
           </div>
           <div className="md:w-1/3 text-center md:text-right">
@@ -69,20 +83,7 @@ const Footer = () => {
             <p className="text-sm">
               Follow us on social media for updates and news:
             </p>
-            <div className="flex justify-center md:justify-end mt-2">
-              <a href="#" className="text-white hover:text-gray-200 mr-4">
-                <i className="fab fa-facebook fa-lg"></i>
-              </a>
-              <a href="#" className="text-white hover:text-gray-200 mr-4">
-                <i className="fab fa-twitter fa-lg"></i>
-              </a>
-              <a href="#" className="text-white hover:text-gray-200 mr-4">
-                <i className="fab fa-instagram fa-lg"></i>
-              </a>
-              <a href="#" className="text-white hover:text-gray-200">
-                <i className="fab fa-linkedin fa-lg"></i>
-              </a>
-            </div>
+           
           </div>
         </div>
         <div className="text-center mt-4">

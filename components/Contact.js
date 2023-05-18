@@ -21,15 +21,19 @@ const ContactPage = () => {
         <title>Contact Us - Shareholder Management System</title>
       </Head>
       <section className="bg-slate-100">
+      <div className="pt-10 sm:pt-15 hover:scale-110 ease-in duration-300">
+      <h1 className="text-4xl font-bold text-center">Welcome to our company </h1>
+      </div>
       <div
-       className="container flex flex-col items-center  px-6 mx-auto space-y-0 md:space-y-50 md:flex-row w-full h-screen text-center "
+       className="container flex flex-col items-center mx-auto py-20 space-y-10 md:flex-row md:mx-auto w-full  "
       >
-        <div className="md:w-1/2 ">
-          <img src="/assets/logo/manage.jpg" alt=""  className='rounded-xl hover:scale-110 ease-in duration-300'/>
+          
+        <div className=" md:w-1/2 ml-20">
+          <img src="/assets/logo/contact.jpg" alt=""  className='rounded-xl hover:scale-110 ease-in duration-300'/>
         </div>
-      <div className="min-h-screen flex flex-col items-center justify-center  md:w-1/2 w-full hover:scale-110 ease-in duration-300">
-        <h1 className="text-4xl font-bold mb-8">Welcome </h1>
-        <div className="relative w-full max-w-md px-4 sm:px-6 md:px-8 py-10 bg-gray-200 shadow-md rounded-3xl sm:p-20">
+      <div className=" m-auto flex flex-col items-center justify-center  md:w-1/2 w-full hover:scale-110 ease-in duration-300">
+      
+        <div className="relative w-full max-w-md px-4 sm:px-6 md:px-8 py-3 bg-gray-200 shadow-md rounded-3xl">
           <div className="max-w-md mx-auto">
             <div className="flex items-center space-x-5">
               <div className="h-14 w-14 bg-indigo-900 rounded-full flex flex-shrink-0 justify-center items-center text-white text-2xl font-mono">
@@ -56,7 +60,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="divide-y divide-gray-600">
-              <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+              <div className="py-8 text-base gap-4 leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7  ">
                 <form onSubmit={handleSubmit}>
                   <div className="relative">
                     <input

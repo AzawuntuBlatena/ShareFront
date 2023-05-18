@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { UserAuth } from "../context/AuthContext";
 import Heator from "@/components/Layout/Heator";
-
 export default function Login() {
   const router = useRouter();
  const { Userlogin}= UserAuth();
@@ -31,18 +30,15 @@ export default function Login() {
   };
   useEffect(() => {
     const user= JSON.parse(sessionStorage.getItem("user"));
+    // console.log(user.token)
     if(user){
-      if (user.roll===2) {
-        router.push("/");
-      }
       if (user.roll===0) {
-        router.push("/log");
+        router.push("/shareholder");
+      }
+      if (user.roll===2) {
+        router.push("/shareholder/news");
       }
     }
-
-    // if (userdata) {
-    // //  Userlogin(email,password);
-    // }
   }, [isdata]);
   return (
     <Heator>
@@ -141,3 +137,8 @@ export default function Login() {
     </Heator>
   );
 }
+
+
+
+
+
